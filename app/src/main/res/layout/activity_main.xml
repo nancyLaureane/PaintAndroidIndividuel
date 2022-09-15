@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+
+<LinearLayout
+    android:id="@+id/linear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/btn_undo"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/undoflat_106020"
+                android:text="Undo" />
+
+            <ImageButton
+            android:id="@+id/btn_pencil"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:src="@drawable/pencil_icon"
+            android:text="Pencil" />
+
+        <ImageButton
+            android:id="@+id/btn_shape"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:src="@drawable/shape_icon"
+            android:text="Shape" />
+
+        <ImageButton
+            android:id="@+id/btn_color"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:src="@drawable/color"
+            android:text="Color" />
+
+
+        <ImageButton
+            android:id="@+id/btn_save"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:src="@drawable/save"
+            android:text="Color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/greys"
+            >
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rangebar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.example.paint.DrawView
+        android:id="@+id/draw_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>
